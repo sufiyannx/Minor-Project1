@@ -1,0 +1,274 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   LearnRoute - Your Learning Roadmap
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .zoom-in {
+            animation: zoomIn 1s ease-in-out;
+        }
+        @keyframes loadingFadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        .loading-fade-out {
+            animation: loadingFadeOut 1s ease-in-out forwards;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1a202c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+        }
+  </style>
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('loading-fade-out');
+                setTimeout(function() {
+                    document.getElementById('loading-screen').style.display = 'none';
+                }, 1000);
+            }, 2000);
+        });
+  </script>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <div class="loading-screen" id="loading-screen">
+   <h1 class="text-4xl font-bold text-white">
+    WELCOME!
+   </h1>
+  </div>
+  <header class="bg-gray-800 p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-3xl font-bold fade-in">
+     LearnRoute
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:text-gray-400" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-400" href="#">
+        Roadmap
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-400" href="#">
+        Courses
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-400" href="#">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hover:text-gray-400" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <section class="bg-gray-700 py-20 slide-in">
+   <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-4">
+        Find Your Route to Success
+    </h2>
+    <p class="text-lg mb-8">
+     Discover the roadmap to becoming an expert in your field.
+    </p>
+    <a class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600" href="#">
+     Get Started<a href="html.second" target="_blank" style="text-decoration: none;"></a>
+    </a>
+   </div>
+  </section>
+  <section class="py-20">
+   <div class="container mx-auto zoom-in">
+    <h2 class="text-3xl font-bold text-center mb-12">
+     Roadmap
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Futuristic cityscape with neon lights" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/tkJlKr4Y016pLZWkdH4erevlMg9A4epIKH2x1grtMTEWsfLPB.jpg" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Step 1: Foundation
+      </h3>
+      <p class="text-gray-400">
+       Build a strong foundation with the basics of your chosen field.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Abstract representation of data and algorithms" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/Wr1gBEJYhv6dL5dDnLBusDkIUpvdrxlsWoRWihNJs5wk9v8E.jpg" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Step 2: Intermediate
+      </h3>
+      <p class="text-gray-400">
+       Enhance your skills with intermediate concepts and techniques.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="High-tech futuristic workspace" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/49eDeQjOcIihkkoC8V8dZrcjv4seUhDie8u3UtkEPSs6YfXeE.jpg" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Step 3: Advanced
+      </h3>
+      <p class="text-gray-400">
+       Master advanced topics and become an expert in your field.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="bg-gray-700 py-20">
+   <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8">
+     Featured Courses
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Person coding on a futuristic computer" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/teZwnHee6peutQQSwzocn0kOzKsd9FbkEun6nvivntdFZfXeE.jpg" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Course 1: Introduction to AI
+      </h3>
+      <p class="text-gray-400">
+       Learn the basics of Artificial Intelligence and its applications.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Abstract representation of blockchain technology" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/OjAvEf77hIT4YC69MLwK8F3PkdfekQdfjiygwVWOWGw3YfXeE.jpg" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Course 2: Blockchain Fundamentals
+      </h3>
+      <p class="text-gray-400">
+       Understand the core concepts of blockchain technology.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Person working on a futuristic data analysis dashboard" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="https://storage.googleapis.com/a1aa/image/yJZSf9Fn8M2gKizohZsa9iZASZ0I9dnrK3YMbEhU2moE7fyTA.jpg" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Course 3: Data Science
+      </h3>
+      <p class="text-gray-400">
+       Dive into data science and learn how to analyze and visualize data.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Person working on a futuristic cybersecurity interface" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="1.png" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Course 4: Cybersecurity Basics
+      </h3>
+      <p class="text-gray-400">
+       Learn the fundamentals of cybersecurity and how to protect systems.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Person designing a futuristic user interface" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="2.png" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Course 5: UI/UX Design
+      </h3>
+      <p class="text-gray-400">
+       Master the principles of user interface and user experience design.
+      </p>
+     </div>
+     <div class="bg-gray-800 p-6 rounded-lg hover-effect">
+      <img alt="Person working on a futuristic machine learning model" class="w-full h-40 object-cover rounded-lg mb-4" height="400" src="3.png" width="600"/>
+      <h3 class="text-2xl font-bold mb-2">
+       Course 6: Machine Learning
+      </h3>
+      <p class="text-gray-400">
+       Explore the world of machine learning and build predictive models.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="bg-gray-800 py-6">
+   <div class="container mx-auto text-center">
+    <p class="text-gray-400">
+     © 2024 LearnRoute. All rights reserved.
+    </p>
+    <div class="flex justify-center space-x-4 mt-4">
+     <a class="text-gray-400 hover:text-white" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-gray-400 hover:text-white" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-gray-400 hover:text-white" href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+     <a class="text-gray-400 hover:text-white" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>
